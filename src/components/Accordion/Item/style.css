@@ -1,0 +1,79 @@
+/* Closed item styles */
+
+.accordion-item {
+    padding: 15px;
+
+    border-bottom: 1px solid #777FCA33;
+    margin-bottom: 1.5em;
+}
+
+/* Hide the last item's divider */
+.accordion-item:last-child {
+    border-color: transparent;
+}
+
+/* Hide the previous item's divider, when the current item is open */
+.accordion-item:has(+ .accordion-item.open) {
+    border-color: transparent;
+}
+
+.accordion-item .header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1em;
+
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.accordion-item .title {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.accordion-item .icon svg {
+    transition: all 0.5s ease;
+}
+
+.accordion-item .content {
+    max-height: 0px;
+    overflow: hidden;
+
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    
+    opacity: 0;
+
+    transition: max-height 0.5s ease-out, opacity 0.5s ease;
+}
+
+/* Open item styles */
+
+.accordion-item.open {
+    color: white;
+    background: #913d9a;
+
+    border-bottom: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(41, 48, 108, 0.25);
+}
+
+.accordion-item.open .title {
+    font-weight: 700;
+}
+
+.accordion-item.open .icon {
+    padding-top: .5em;
+}
+
+.accordion-item.open .icon svg {
+    transform: rotate(180deg);
+}
+
+.accordion-item.open .content {
+    max-height: 300px;
+    opacity: 1;
+    transition: max-height 1.5s ease-out, opacity 1s ease;
+}

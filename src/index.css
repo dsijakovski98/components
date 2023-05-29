@@ -1,0 +1,26 @@
+* {
+    font-family: system-ui;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(76.8deg, #792d81 3.6%, rgb(36, 31, 98) 90.4%);
+    color: whitesmoke;
+    min-height: 100dvh;
+}
+
+.title {
+    text-align: center;
+    padding-block: 1em;
+}
+
+.components-list {
+    max-width: 800px;
+    margin: 0 auto;
+
+    display: grid;
+    place-items: center;
+    padding-block: 1em;
+}
